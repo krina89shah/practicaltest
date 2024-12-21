@@ -26,7 +26,7 @@ class ApiPostController extends Controller
             'content' => 'required|string',
         ]);
         $validated['user_id'] = $user->id;
-        $post = Post::cr;eate($validated);
+        $post = Post::create($validated);
 
         return response()->json($post, 201);
     }
